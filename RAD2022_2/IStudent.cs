@@ -13,5 +13,6 @@ namespace RAD2022_2
         string name { get; set; }
         string email { get; set; }
     }
-    
+
 }
+//
