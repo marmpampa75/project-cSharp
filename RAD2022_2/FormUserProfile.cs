@@ -13,12 +13,12 @@ namespace RAD2022_2
 {
     public partial class FormUserProfile : System.Windows.Forms.Form
     {
-        public static String data;
-        public FormUserProfile(String k)
+        public static ClassStudent data;
+        public FormUserProfile(ClassStudent student)
         {
             InitializeComponent();
-            data = k;
-            usernameToolStripMenuItem.Text = "Welcome, " + k;
+            data = student;
+            usernameToolStripMenuItem.Text = "Welcome, " + data.name;
             richTextBox1.LoadFile("textfiles\\programma.txt", RichTextBoxStreamType.PlainText);
 
         }

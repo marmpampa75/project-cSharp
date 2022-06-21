@@ -13,7 +13,7 @@ namespace RAD2022_2
 {
     public partial class FormLogIn : Form
     {
-        public static String data;
+        public static ClassStudent data;
         public ClassStudent student;
 
         private String connectionString = "Data source=.\\rad2022_4.db;Version=3";
@@ -25,7 +25,7 @@ namespace RAD2022_2
 
         private void profileToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            data = "unknown";
+            data.name = "unknown";
             this.Hide();
             FormUserProfile fp = new FormUserProfile(data);
             fp.Show();
@@ -33,7 +33,7 @@ namespace RAD2022_2
 
         private void homePageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            data = "unknown";
+            data.name = "unknown";
             this.Hide();
             FormMainPage f3 = new FormMainPage(data);
             f3.Show();
@@ -64,23 +64,23 @@ namespace RAD2022_2
                 fieldCount = reader.GetValues(values);  
                 //student.name = name.ToString();
                 //student.email(email);
-                values = new Object[3];
+                values = new Object[6];
                 reader.GetValues(values);
-                ClassStudent student = new ClassStudent(22, values[1].ToString(), values[2].ToString(), "mppl20000");
+                ClassStudent student = new ClassStudent(values[5].ToString(), values[1].ToString(), values[2].ToString(), values[4].ToString());
                 MessageBox.Show("Welcome, " + student.name);
                 conn.Close();
                 this.Hide();
                 if (email != "" || email != null)
                 {
 
-                    data = student.name;
+                    data = student;
                 }
                 else
                 {
-                    data = student.id;
+                    data = student;
                 }
 
-                FormMainPage f3 = new FormMainPage(student.name);
+                FormMainPage f3 = new FormMainPage(student);
                 f3.Show();
             }
             else

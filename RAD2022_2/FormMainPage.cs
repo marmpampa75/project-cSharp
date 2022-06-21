@@ -13,12 +13,12 @@ namespace RAD2022_2
 {
     public partial class FormMainPage : Form
     {
-        public static String data;
-        public FormMainPage(String k)
+        public static ClassStudent data;
+        public FormMainPage(ClassStudent student)
         {
             InitializeComponent();
-            data = k;
-            usernameToolStripMenuItem.Text = "Welcome, "+k;
+            data = student;
+            usernameToolStripMenuItem.Text = "Welcome, "+ student.name;
             pictureBox2.ImageLocation = @"images\download.jpg";
         }
         public FormMainPage()

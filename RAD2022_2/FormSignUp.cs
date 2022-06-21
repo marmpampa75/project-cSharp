@@ -13,7 +13,7 @@ namespace RAD2022_2
 {
     public partial class FormSignUp : System.Windows.Forms.Form
     {
-        public static String data;
+        public static ClassStudent data;
         public ClassStudent student;
 
         private String connectionString = "Data source=.\\rad2022_4.db;Version=3";
@@ -38,23 +38,23 @@ namespace RAD2022_2
             cmd.Parameters.AddWithValue("@password", password);
             SQLiteDataReader reader = cmd.ExecuteReader();
             if (reader.Read()) {
-                ClassStudent student = new ClassStudent(22,password,email,name);
+                ClassStudent student = new ClassStudent("unknown", "unknown", "unknown", "unknown");
 
                 //student.name = name.ToString();
                 //student.email(email);
-                MessageBox.Show("Welcome, "+student.name);
+                MessageBox.Show("Welcome, "+ name);
                 conn.Close();
                 this.Hide();
                 if (name != "" || name != null)
                 {
 
-                    data = student.name;
+                    data.name = student.name;
                 } else
                 {
-                    data = student.id;
+                    data.name = student.id;
                 }
 
-                FormMainPage f3 = new FormMainPage(student.name);
+                FormMainPage f3 = new FormMainPage(student);
                 f3.Show();
             } else {
                 conn.Close();
@@ -90,12 +90,14 @@ namespace RAD2022_2
             String password = textBox2.Text;
             String date = dateTimePicker1.Text;
             String am = textBox6.Text;
-            String insertSQL = "Insert into User(name,email,password) " +
-            "values(@name,@email,@password)";
+            String insertSQL = "Insert into User(name,email,password,student_id,age) " +
+            "values(@name,@email,@password,@am,@date)";
             SQLiteCommand cmd = new SQLiteCommand(insertSQL, conn);
             cmd.Parameters.AddWithValue("@name", name);
             cmd.Parameters.AddWithValue("@email", email);
             cmd.Parameters.AddWithValue("@password", password);
+            cmd.Parameters.AddWithValue("@am", am);
+            cmd.Parameters.AddWithValue("@date", date);
             int count = cmd.ExecuteNonQuery();
             if (count > 0)
                 MessageBox.Show(count.ToString() + " row affected"+ date);
@@ -115,7 +117,7 @@ namespace RAD2022_2
 
         private void homePageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            data = "unknown";
+            data.name = "unknown";
             this.Hide();
             FormMainPage f3 = new FormMainPage(data);
             f3.Show();
@@ -141,7 +143,7 @@ namespace RAD2022_2
 
         private void profileToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            data = "unknown";
+            data.name = "unknown";
             this.Hide();
             FormUserProfile fp = new FormUserProfile(data);
             fp.Show();
