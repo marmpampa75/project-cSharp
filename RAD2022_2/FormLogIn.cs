@@ -59,11 +59,11 @@ namespace RAD2022_2
             SQLiteDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
-                ClassStudent student = new ClassStudent(22, password, email, "name");
+                ClassStudent student = new ClassStudent(22, "name", email, "mppl20000");
 
                 //student.name = name.ToString();
                 //student.email(email);
-                MessageBox.Show("Welcome, " + student.name);
+                MessageBox.Show("Welcome, " + student.email+student.age+student.name);
                 conn.Close();
                 this.Hide();
                 if (email != "" || email != null)
