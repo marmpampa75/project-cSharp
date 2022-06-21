@@ -9,9 +9,10 @@ namespace RAD2022_2
     internal interface IStudent
     {
         int age { get; set; }
-        string id { get; set; }
         string name { get; set; }
+        string id { get; set; }
         string email { get; set; }
     }
-    
+
 }
+//

@@ -88,6 +88,8 @@ namespace RAD2022_2
             String name = textBox1.Text;
             String email = textBox3.Text;
             String password = textBox2.Text;
+            String date = dateTimePicker1.Text;
+            String am = textBox6.Text;
             String insertSQL = "Insert into User(name,email,password) " +
             "values(@name,@email,@password)";
             SQLiteCommand cmd = new SQLiteCommand(insertSQL, conn);
@@ -96,7 +98,7 @@ namespace RAD2022_2
             cmd.Parameters.AddWithValue("@password", password);
             int count = cmd.ExecuteNonQuery();
             if (count > 0)
-                MessageBox.Show(count.ToString() + " row affected");
+                MessageBox.Show(count.ToString() + " row affected"+ date);
             conn.Close();
         }
 
@@ -182,6 +184,11 @@ namespace RAD2022_2
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }
