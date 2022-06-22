@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Media;
@@ -9,11 +10,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace RAD2022_2
 {
     public partial class FormUserProfile : System.Windows.Forms.Form
     {
         public static ClassStudent data;
+        private String connectionString = "Data source=.\\rad2022_4.db;Version=3";
+        SQLiteConnection conn;
+
         public FormUserProfile(ClassStudent student)
         {
             InitializeComponent();
@@ -83,11 +89,7 @@ namespace RAD2022_2
             button7.Text = "Click img Button";
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
 
 
         private void label1_Click(object sender, EventArgs e)
@@ -151,5 +153,61 @@ namespace RAD2022_2
             f2.Show();
         }
 
+
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+            conn = new SQLiteConnection(connectionString);
+            conn.Open();
+            string subject = textBox2.Text.ToString();
+            string student_name = data.name.ToString();
+            int student_index = data.index;
+            string insertLessonsSQL = "Insert into Lessons(subject,student_name,student_idx) " +
+            "values(@subject,@student_name,@student_index)";
+            SQLiteCommand cmd = new SQLiteCommand(insertLessonsSQL, conn);
+            cmd.Parameters.AddWithValue("@subject", subject);
+            cmd.Parameters.AddWithValue("@student_name", student_name);
+            cmd.Parameters.AddWithValue("@student_index", student_index);
+            int count = cmd.ExecuteNonQuery();
+            if (count > 0)
+                MessageBox.Show(count.ToString() + " row affected" + subject);
+            conn.Close();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            conn = new SQLiteConnection(connectionString);
+            conn.Open();
+            string subject = textBox2.Text.ToString();
+            string student_name = data.name.ToString();
+            int student_index = data.index;
+            string insertLessonsSQL = "Insert into Lessons(subject,student_name,student_idx) " +
+            "values(@subject,@student_name,@student_index)";
+            SQLiteCommand cmd = new SQLiteCommand(insertLessonsSQL, conn);
+            cmd.Parameters.AddWithValue("@subject", subject);
+            cmd.Parameters.AddWithValue("@student_name", student_name);
+            cmd.Parameters.AddWithValue("@student_index", student_index);
+            int count = cmd.ExecuteNonQuery();
+            conn.Close();
+            if (count > 0)
+            {
+                MessageBox.Show("Success");
+            }
+            else
+            {
+                MessageBox.Show("Error no lessons added");
+            }
+        }
+
+        private void FormUserProfile_Load(object sender, EventArgs e)
+        {
+            conn = new SQLiteConnection(connectionString);
+        }
     }
 }

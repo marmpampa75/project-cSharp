@@ -126,14 +126,14 @@
             // profileToolStripMenuItem1
             // 
             this.profileToolStripMenuItem1.Name = "profileToolStripMenuItem1";
-            this.profileToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.profileToolStripMenuItem1.Size = new System.Drawing.Size(135, 26);
             this.profileToolStripMenuItem1.Text = "Profile";
             this.profileToolStripMenuItem1.Click += new System.EventHandler(this.profileToolStripMenuItem1_Click);
             // 
             // logoutToolStripMenuItem1
             // 
             this.logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
-            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(135, 26);
             this.logoutToolStripMenuItem1.Text = "Log In";
             this.logoutToolStripMenuItem1.Click += new System.EventHandler(this.logoutToolStripMenuItem1_Click);
             // 
@@ -170,6 +170,7 @@
             this.Controls.Add(this.button1);
             this.Name = "FormLogIn";
             this.Text = "FormLogIn";
+            this.Load += new System.EventHandler(this.FormLogIn_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

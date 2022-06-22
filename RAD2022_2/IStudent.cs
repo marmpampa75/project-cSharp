@@ -11,6 +11,7 @@ namespace RAD2022_2
         string age { get; set; }
         string name { get; set; }
         string id { get; set; }
+        int index { get; set; }
         string email { get; set; }
     }
 

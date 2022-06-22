@@ -47,12 +47,12 @@ namespace RAD2022_2
             Console.WriteLine("This is C#");
 
             conn.Open();
-            String name = textBox1.Text;
-            String email = textBox3.Text;
-            String password = textBox2.Text;
-            String date = dateTimePicker1.Text;
-            String am = textBox6.Text;
-            String insertSQL = "Insert into User(name,email,password,student_id,age) " +
+            string name = textBox1.Text;
+            string email = textBox3.Text;
+            string password = textBox2.Text;
+            string date = dateTimePicker1.Text;
+            string am = textBox6.Text;
+            string insertSQL = "Insert into User(name,email,password,student_id,age) " +
             "values(@name,@email,@password,@am,@date)";
             SQLiteCommand cmd = new SQLiteCommand(insertSQL, conn);
             cmd.Parameters.AddWithValue("@name", name);
