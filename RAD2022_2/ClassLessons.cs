@@ -8,8 +8,8 @@ namespace RAD2022_2
 {
     public class ClassLessons : ILessons
     {
-        public string[] lessons { get; set; }
-        public ClassLessons(string[] lessons)
+        public System.Collections.Generic.List<string> lessons { get; set; }
+        public ClassLessons(System.Collections.Generic.List<string> lessons)
         {
             this.lessons = lessons;
         }

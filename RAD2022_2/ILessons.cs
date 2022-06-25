@@ -8,6 +8,6 @@ namespace RAD2022_2
 {
     internal interface ILessons
     {
-        string[] lessons { get; set; }
+        System.Collections.Generic.List<string> lessons { get; set; }
     }
 }

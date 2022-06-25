@@ -25,9 +25,9 @@ namespace RAD2022_2
 
         private void profileToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            data.name = "unknown";
+            ClassStudent student = new ClassStudent("unknown", "unknown", "unknown", "unknown", 0);
             this.Hide();
-            FormUserProfile fp = new FormUserProfile(data);
+            FormUserProfile fp = new FormUserProfile(student);
             fp.Show();
         }
 
@@ -61,11 +61,12 @@ namespace RAD2022_2
             {
                 Object[] values = new Object[reader.FieldCount];
                 //int fieldCount = reader.GetValues(values);
-                //fieldCount = reader.GetValues(values);  
+                //fieldCount = reader.GetValues(values);
                 values = new Object[6];
                 reader.GetValues(values);
-                ClassStudent student = new ClassStudent(values[5].ToString(), values[1].ToString(), values[2].ToString(), values[4].ToString());
+                ClassStudent student = new ClassStudent(values[5].ToString(), values[1].ToString(), values[2].ToString(), values[4].ToString(), Convert.ToInt32(values[0]));
                   MessageBox.Show("Welcome, " + student.name);
+                reader.Close();
                 conn.Close();
                 this.Hide();
                 if (email != "" || email != null)
@@ -83,6 +84,7 @@ namespace RAD2022_2
             }
             else
             {
+                reader.Close();
                 conn.Close();
                 Application.Exit();
             }
@@ -92,6 +94,11 @@ namespace RAD2022_2
         {
             FormLogIn f3 = new FormLogIn();
             f3.Show();
+        }
+
+        private void FormLogIn_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

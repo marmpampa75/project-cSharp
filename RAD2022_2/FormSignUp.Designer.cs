@@ -80,7 +80,7 @@ namespace RAD2022_2
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(312, 425);
+            this.button2.Location = new System.Drawing.Point(313, 347);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 59);
             this.button2.TabIndex = 5;
