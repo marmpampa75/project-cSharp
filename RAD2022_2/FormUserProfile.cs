@@ -16,6 +16,7 @@ namespace RAD2022_2
 {
     public partial class FormUserProfile : System.Windows.Forms.Form
     {
+        public static String myLessons = "";
         public static ClassStudent data;
         public static ClassLessons lessons;
         private String connectionString = "Data source=.\\rad2022_4.db;Version=3";
@@ -53,8 +54,16 @@ namespace RAD2022_2
                     List<string> list = (from IDataRecord r in reader
                                          select (string)r["subject"]
                     ).ToList();
-                    MessageBox.Show("Welcome, " + list[0]);
-                    MessageBox.Show("Welcome, " + values);
+                    ClassLessons Mylessons = new ClassLessons(list);
+                    lessons = Mylessons;
+                    //MessageBox.Show("Welcome, " + list[0]);
+                    foreach (var v in lessons.lessons)
+                    {
+                        myLessons += v + "\n";
+                    }
+
+                    richTextBox2.Text = myLessons;
+                    
                     //reader.Close();
                     conn.Close();
                     //this.Hide();
@@ -70,8 +79,20 @@ namespace RAD2022_2
                     //
                 }
             }
+            else
+            {
+                List<string> list = new List<string>();
+                ClassLessons mylessons = new ClassLessons(list);
+                lessons = mylessons;
+                foreach (var v in lessons.lessons)
+                {
+                    myLessons += v + "\n";
+                }
 
-            }
+                richTextBox2.Text = myLessons;
+                }
+        }
+
             public FormUserProfile()
         {
             InitializeComponent();
@@ -261,6 +282,12 @@ namespace RAD2022_2
         private void FormUserProfile_Load(object sender, EventArgs e)
         {
             conn = new SQLiteConnection(connectionString);
+             
+        }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

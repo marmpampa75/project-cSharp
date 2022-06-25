@@ -55,6 +55,7 @@ namespace RAD2022_2
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -289,12 +290,22 @@ namespace RAD2022_2
             this.button10.Text = "button10";
             this.button10.UseVisualStyleBackColor = true;
             // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(45, 670);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(713, 258);
+            this.richTextBox2.TabIndex = 21;
+            this.richTextBox2.Text = "";
+            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
+            // 
             // FormUserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(782, 953);
+            this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -352,6 +363,7 @@ namespace RAD2022_2
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.RichTextBox richTextBox2;
     }
 }
 
