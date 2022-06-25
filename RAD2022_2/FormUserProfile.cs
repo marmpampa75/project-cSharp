@@ -17,6 +17,7 @@ namespace RAD2022_2
     public partial class FormUserProfile : System.Windows.Forms.Form
     {
         public static ClassStudent data;
+        public static ClassLessons lessons;
         private String connectionString = "Data source=.\\rad2022_4.db;Version=3";
         SQLiteConnection conn;
 
@@ -27,8 +28,51 @@ namespace RAD2022_2
             usernameToolStripMenuItem.Text = "Welcome, " + data.name;
             richTextBox1.LoadFile("textfiles\\programma.txt", RichTextBoxStreamType.PlainText);
 
-        }
-        public FormUserProfile()
+            if (!(data.name == "unknown"))
+            {
+                conn = new SQLiteConnection(connectionString);
+                conn.Open();
+                String name = data.name;
+                int index = Convert.ToInt32(data.index);
+                String selectLessonsSQL = "Select subject from Lessons where " +
+                "student_name=@name and student_idx=@index";
+
+                SQLiteCommand cmd = new SQLiteCommand(selectLessonsSQL, conn);
+                cmd.Parameters.AddWithValue("name", name);
+                cmd.Parameters.AddWithValue("@index", index);
+                SQLiteDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    Object[] values = new Object[reader.FieldCount];
+                    int fieldCount = reader.GetValues(values);
+                    //fieldCount = reader.GetValues(values);  
+                    values = new Object[1];
+                    Console.Out.WriteLine(values);
+                    //reader.GetValues(values);
+                    List<string> list = (from IDataRecord r in reader
+                                         select (string)r["subject"]
+                    ).ToList();
+                    MessageBox.Show("Welcome, " + list[0]);
+                    MessageBox.Show("Welcome, " + values);
+                    //reader.Close();
+                    conn.Close();
+                    //this.Hide();
+                    //if (name != "" || name != null)
+                    //{
+
+                    //    lessons = lessons;
+                    //}
+                    //else
+                    //{
+                    //    lessons = lessons;
+                    //}
+                    //
+                }
+            }
+
+            }
+            public FormUserProfile()
         {
             InitializeComponent();
         }
