@@ -162,7 +162,15 @@ namespace RAD2022_2
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            if (data.name == "unknown")
+            {
+                MessageBox.Show("No permissions!");
+                this.Hide();
+                FormSignUp fs = new FormSignUp();
+                fs.Show();
+            } else
+            {
+
             conn = new SQLiteConnection(connectionString);
             conn.Open();
             string subject = textBox2.Text.ToString();
@@ -178,6 +186,7 @@ namespace RAD2022_2
             if (count > 0)
                 MessageBox.Show(count.ToString() + " row affected" + subject);
             conn.Close();
+            }
         }
 
         private void button11_Click(object sender, EventArgs e)
