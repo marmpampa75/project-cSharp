@@ -93,5 +93,13 @@ namespace RAD2022_2
             FormUserProfile fp = new FormUserProfile(data);
             fp.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (colorDialog2.ShowDialog() == DialogResult.OK)
+            {
+                this.BackColor = colorDialog2.Color;
+            }
+        }
     }
 }

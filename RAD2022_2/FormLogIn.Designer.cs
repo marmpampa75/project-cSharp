@@ -41,50 +41,60 @@
             this.homePageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usernameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button2 = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(365, 191);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label3.Location = new System.Drawing.Point(259, 162);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 16);
+            this.label3.Size = new System.Drawing.Size(81, 18);
             this.label3.TabIndex = 32;
             this.label3.Text = "password";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(380, 83);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label1.Location = new System.Drawing.Point(278, 74);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 16);
+            this.label1.Size = new System.Drawing.Size(48, 18);
             this.label1.TabIndex = 30;
             this.label1.Text = "email";
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox2.Location = new System.Drawing.Point(285, 224);
+            this.textBox2.Location = new System.Drawing.Point(214, 182);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(227, 41);
+            this.textBox2.Size = new System.Drawing.Size(171, 35);
             this.textBox2.TabIndex = 27;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox1.Location = new System.Drawing.Point(285, 121);
+            this.textBox1.Location = new System.Drawing.Point(214, 94);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 41);
+            this.textBox1.Size = new System.Drawing.Size(171, 35);
             this.textBox1.TabIndex = 26;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(335, 302);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.button1.Location = new System.Drawing.Point(251, 269);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 59);
+            this.button1.Size = new System.Drawing.Size(89, 48);
             this.button1.TabIndex = 25;
-            this.button1.Text = "Logi In";
+            this.button1.Text = "Log In";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -92,9 +102,10 @@
             // 
             this.button8.BackColor = System.Drawing.Color.Red;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.button8.Location = new System.Drawing.Point(652, 0);
+            this.button8.Location = new System.Drawing.Point(481, -1);
+            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(148, 32);
+            this.button8.Size = new System.Drawing.Size(105, 25);
             this.button8.TabIndex = 33;
             this.button8.Text = "Close App";
             this.button8.UseVisualStyleBackColor = false;
@@ -110,7 +121,8 @@
             this.usernameToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(782, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(586, 24);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -120,47 +132,61 @@
             this.profileToolStripMenuItem1,
             this.logoutToolStripMenuItem1});
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            this.profileToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.profileToolStripMenuItem.Text = "Student Info";
             // 
             // profileToolStripMenuItem1
             // 
             this.profileToolStripMenuItem1.Name = "profileToolStripMenuItem1";
-            this.profileToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.profileToolStripMenuItem1.Size = new System.Drawing.Size(108, 22);
             this.profileToolStripMenuItem1.Text = "Profile";
             this.profileToolStripMenuItem1.Click += new System.EventHandler(this.profileToolStripMenuItem1_Click);
             // 
             // logoutToolStripMenuItem1
             // 
             this.logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
-            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(108, 22);
             this.logoutToolStripMenuItem1.Text = "Log In";
             this.logoutToolStripMenuItem1.Click += new System.EventHandler(this.logoutToolStripMenuItem1_Click);
             // 
             // homePageToolStripMenuItem
             // 
             this.homePageToolStripMenuItem.Name = "homePageToolStripMenuItem";
-            this.homePageToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
+            this.homePageToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.homePageToolStripMenuItem.Text = "Home Page";
             this.homePageToolStripMenuItem.Click += new System.EventHandler(this.homePageToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.logOutToolStripMenuItem.Text = "Sign Up";
             // 
             // usernameToolStripMenuItem
             // 
             this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
-            this.usernameToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.usernameToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.usernameToolStripMenuItem.Text = "username: ";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.button2.Location = new System.Drawing.Point(407, -1);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(69, 25);
+            this.button2.TabIndex = 35;
+            this.button2.Text = "Choose";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormLogIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 953);
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.ClientSize = new System.Drawing.Size(586, 436);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label3);
@@ -168,6 +194,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormLogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogIn";
@@ -194,5 +221,7 @@
         private System.Windows.Forms.ToolStripMenuItem homePageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usernameToolStripMenuItem;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }

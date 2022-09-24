@@ -84,7 +84,8 @@ namespace RAD2022_2
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(212, 45);
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.richTextBox1.Location = new System.Drawing.Point(203, 43);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(367, 264);
@@ -94,8 +95,8 @@ namespace RAD2022_2
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button3.Location = new System.Drawing.Point(253, 339);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.button3.Location = new System.Drawing.Point(252, 338);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(156, 41);
@@ -106,7 +107,7 @@ namespace RAD2022_2
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.LightCoral;
+            this.button4.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.button4.Location = new System.Drawing.Point(397, -3);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
@@ -119,8 +120,8 @@ namespace RAD2022_2
             // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.button5.Location = new System.Drawing.Point(420, 339);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.button5.Location = new System.Drawing.Point(412, 338);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(158, 41);
@@ -136,8 +137,8 @@ namespace RAD2022_2
             // 
             // button6
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button6.Location = new System.Drawing.Point(34, 336);
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.button6.Location = new System.Drawing.Point(34, 338);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(208, 41);
@@ -164,7 +165,7 @@ namespace RAD2022_2
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.Red;
+            this.button8.BackColor = System.Drawing.Color.OrangeRed;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.button8.Location = new System.Drawing.Point(474, -3);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
@@ -238,7 +239,7 @@ namespace RAD2022_2
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label3.Location = new System.Drawing.Point(32, 412);
+            this.label3.Location = new System.Drawing.Point(53, 418);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(174, 22);
@@ -248,7 +249,7 @@ namespace RAD2022_2
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox2.Location = new System.Drawing.Point(253, 403);
+            this.textBox2.Location = new System.Drawing.Point(251, 413);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(157, 35);
@@ -257,7 +258,8 @@ namespace RAD2022_2
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(420, 403);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.button1.Location = new System.Drawing.Point(421, 413);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 33);
@@ -270,7 +272,7 @@ namespace RAD2022_2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label1.Location = new System.Drawing.Point(30, 496);
+            this.label1.Location = new System.Drawing.Point(53, 489);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 22);
@@ -289,10 +291,11 @@ namespace RAD2022_2
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(420, 483);
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.button9.Location = new System.Drawing.Point(421, 483);
             this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(89, 33);
+            this.button9.Size = new System.Drawing.Size(89, 35);
             this.button9.TabIndex = 17;
             this.button9.Text = "delete";
             this.button9.UseVisualStyleBackColor = true;
@@ -300,6 +303,7 @@ namespace RAD2022_2
             // 
             // richTextBox2
             // 
+            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.richTextBox2.Location = new System.Drawing.Point(34, 544);
             this.richTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox2.Name = "richTextBox2";
@@ -312,7 +316,7 @@ namespace RAD2022_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(586, 774);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.label1);

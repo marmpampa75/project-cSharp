@@ -100,5 +100,13 @@ namespace RAD2022_2
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                this.BackColor = colorDialog1.Color;
+            }
+        }
     }
 }
