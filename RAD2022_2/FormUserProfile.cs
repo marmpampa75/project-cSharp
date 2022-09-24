@@ -249,7 +249,7 @@ namespace RAD2022_2
             cmd.Parameters.AddWithValue("@student_index", student_index);
             int count = cmd.ExecuteNonQuery();
             if (count > 0)
-                MessageBox.Show(count.ToString() + " row affected" + subject);
+                MessageBox.Show(count.ToString() + " row affected " + subject);
             conn.Close();
                 this.Hide();
                 FormUserProfile fp = new FormUserProfile(data);
@@ -289,6 +289,32 @@ namespace RAD2022_2
         }
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            conn = new SQLiteConnection(connectionString);
+            conn.Open();
+            string subject = textBox1.Text.ToString();
+            string student_name = data.name.ToString();
+            int student_index = data.index;
+            string deleteSubject = $"delete from Lessons where subject='{subject}' and student_name='{student_name}';";
+            SQLiteCommand command = new SQLiteCommand(deleteSubject, conn);
+            int count = command.ExecuteNonQuery();
+            conn.Close();
+            if (count > 0)
+            {
+                MessageBox.Show("Success lesson " + subject + " deleted");
+            }
+            else
+            {
+                MessageBox.Show("Error no lessons deleted");
+            }
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
         }
