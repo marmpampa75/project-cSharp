@@ -102,7 +102,7 @@ namespace RAD2022_2
         private void button2_Click(object sender, EventArgs e)
         {
             pictureBox1.ImageLocation = @"images\how-to-read-more-books.jpg";
-            button2.Text = "Click img -> mute";
+            //button2.Text = "Click img -> mute";
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

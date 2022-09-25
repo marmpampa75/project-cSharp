@@ -126,4 +126,10 @@
   <metadata name="colorDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>273, 17</value>
   </metadata>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>The Department of Informatics accepts students from the practical and technological direction. Its subject is both theoretical and applied Informatics. The programme of studies covers all new orientations and developments in Informatics in accordance with the changing academic and production needs. The duration of studies is eight semesters; in the fifth semester students are offered the possibility to attend optional subjects. Also in the fifth semester students can opt for one of the three orientations in the course of studies: Technology of Software and Intelligent Systems, Network Computing Systems and Information Systems.</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>

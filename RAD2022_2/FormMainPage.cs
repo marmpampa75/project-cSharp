@@ -19,7 +19,7 @@ namespace RAD2022_2
             InitializeComponent();
             data = student;
             usernameToolStripMenuItem.Text = "Welcome, "+ student.name;
-            pictureBox2.ImageLocation = @"images\download.jpg";
+            pictureBox2.ImageLocation = @"images\logo_piraeus.png";
         }
         public FormMainPage()
         {
@@ -46,7 +46,7 @@ namespace RAD2022_2
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("IExplore", "http://www.youtube.com/watch?v=Dqhy54VV4LY&ab_channel=alexkord1");
+            System.Diagnostics.Process.Start("IExplore", "http://www.youtube.com/watch?v=Xbc84gLheDc");
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
