@@ -239,12 +239,12 @@ namespace RAD2022_2
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label3.Location = new System.Drawing.Point(53, 418);
+            this.label3.Location = new System.Drawing.Point(108, 419);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 22);
+            this.label3.Size = new System.Drawing.Size(115, 22);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Προσθέστε Μάθημα:";
+            this.label3.Text = "Add Lesson :";
             // 
             // textBox2
             // 
@@ -272,12 +272,12 @@ namespace RAD2022_2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label1.Location = new System.Drawing.Point(53, 489);
+            this.label1.Location = new System.Drawing.Point(88, 490);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 22);
+            this.label1.Size = new System.Drawing.Size(135, 22);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Διαγράψτε Μάθημα:";
+            this.label1.Text = "Delete Lesson :";
             // 
             // textBox1
             // 

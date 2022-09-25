@@ -101,14 +101,14 @@ namespace RAD2022_2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            pictureBox1.ImageLocation = @"images\maxresdefault.jpg";
+            pictureBox1.ImageLocation = @"images\how-to-read-more-books.jpg";
             button2.Text = "Click img -> mute";
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             //  MessageBox.Show("IExplore", "http://www.google.com");
-            System.Diagnostics.Process.Start("IExplore", "http://www.youtube.com/watch?v=Dqhy54VV4LY&ab_channel=alexkord1");
+            System.Diagnostics.Process.Start("IExplore", "http://www.youtube.com/watch?v=mIYzp5rcTvU");
         }
 
 
@@ -149,7 +149,7 @@ namespace RAD2022_2
 
         private void button7_Click(object sender, EventArgs e)
         {
-            SoundPlayer player = new SoundPlayer("BSB.wav");
+            SoundPlayer player = new SoundPlayer("old-school-bass-beat-fur-djs-abmischen-rappen-110775.wav");
             player.Play();
             button7.Text = "Click img Button";
         }
