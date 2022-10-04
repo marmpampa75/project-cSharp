@@ -307,6 +307,9 @@ namespace RAD2022_2
             if (count > 0)
             {
                 MessageBox.Show("Success lesson " + subject + " deleted");
+                this.Hide();
+                FormUserProfile fp = new FormUserProfile(data);
+                fp.Show();
             }
             else
             {
