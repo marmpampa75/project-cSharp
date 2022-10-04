@@ -64,6 +64,12 @@ namespace RAD2022_2
             if (count > 0)
                 MessageBox.Show(count.ToString() + " row affected"+ date);
             conn.Close();
+
+
+            ClassStudent student = new ClassStudent(date, name, email, am, 1);
+            this.Hide();
+            FormMainPage f3 = new FormMainPage(student);
+            f3.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
